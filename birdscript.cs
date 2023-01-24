@@ -6,10 +6,12 @@ public class birdscript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float flapStrenght;
+    public logicscript logic;
     // Start is called before the first frame update
     void Start()
     {
-         
+     logic = GameObject.FindWithTag("logic").GetComponent<logicscript>();
+
     }
 
     // Update is called once per frame
@@ -18,5 +20,9 @@ public class birdscript : MonoBehaviour
         { myRigidbody.velocity = Vector2.up * flapStrenght;
         }
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        logic.gameover();
     }
 }
