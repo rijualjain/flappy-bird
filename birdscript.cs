@@ -8,6 +8,7 @@ public class birdscript : MonoBehaviour
     public float flapStrenght;
     public logicscript logic;
     public bool alive = true;
+    public AudioSource flapSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class birdscript : MonoBehaviour
     void Update()
     { if (Input.GetKeyDown(KeyCode.Space) == true && alive ==true)
         { myRigidbody.velocity = Vector2.up * flapStrenght;
+            flapSound.Play();
         }
         
     }
