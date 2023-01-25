@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class spawn : MonoBehaviour
 {
     public GameObject pipe;
     public float spawnrate = 3;
+    public float spawnRateIncrease = 0.01f;
     private float timer = 0;
     public float hightsponer = 10;
 
@@ -25,6 +25,8 @@ public class spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        spawnrate -= spawnRateIncrease * Time.deltaTime;
+
         if (timer < spawnrate)
         {
             timer = timer + Time.deltaTime;

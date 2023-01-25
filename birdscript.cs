@@ -17,21 +17,27 @@ public class birdscript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    { if (Input.GetKeyDown(KeyCode.Space) == true && alive ==true)
-        { myRigidbody.velocity = Vector2.up * flapStrenght;
-            flapSound.Play();
-        }
-        
+void Update()
+{ if (Input.GetKeyDown(KeyCode.Space) == true && alive ==true)
+    { myRigidbody.velocity = Vector2.up * flapStrenght;
+        flapSound.Play();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+}
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (logic != null)
     {
-        logic.gameover();
-        alive = false;
+        logic.isGameOver();
     }
-    private void OnBecameInvisible()
+    alive = false;
+}
+private void OnBecameInvisible()
+{
+    if (logic != null)
     {
-        logic.gameover();
-        alive = false;
+        logic.isGameOver();
     }
+    alive = false;
+}
 }

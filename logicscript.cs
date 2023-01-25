@@ -9,21 +9,25 @@ public class logicscript : MonoBehaviour
     public int score;
     public Text scoreText;
     public GameObject gameoverscreen;
+    public bool gameover = false;
+
     [ContextMenu("Increase score")]
-    public void addscore (int scoretoadd)
+    public void addscore(int scoretoadd)
     {
-        score = score + scoretoadd;
-        scoreText.text = score.ToString();
+        if (!gameover)
+        {
+            score = score + scoretoadd;
+            scoreText.text = score.ToString();
+        }
     }
     public void restartgame()
     {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void gameover()
+    public void isGameOver()
     {
+        gameover = true;
         gameoverscreen.SetActive(true);
     }
-
-
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pipemiddle : MonoBehaviour
 {
+    public AudioSource sound;
     public logicscript logic;
     // Start is called before the first frame update
     void Start()
@@ -12,12 +13,17 @@ public class pipemiddle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (!logic.gameover)
         {
-            
+            if (collision.gameObject.layer == 3)
+            {
                 logic.addscore(1);
+                sound.Play();
             }
         }
+        else
+        {
+            sound.Stop();
+        }
     }
-
-
+}

@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5803294}
+  m_Offset: {x: 0, y: 0.008157253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.33, y: 20.714771}
+  m_Size: {x: 5.33, y: 21.859116}
   m_EdgeRadius: 0
 --- !u!1 &8565045923309884320
 GameObject:
@@ -209,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.6165981}
+  m_Offset: {x: 0, y: 0.06731224}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -220,7 +220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.33, y: 20.642231}
+  m_Size: {x: 5.33, y: 21.740803}
   m_EdgeRadius: 0
 --- !u!1 &8565045923719794099
 GameObject:
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1245350345171064484}
   - component: {fileID: 207546437361165497}
   - component: {fileID: 8908879103608731408}
-  - component: {fileID: 6367805688657822768}
+  - component: {fileID: 5221015047648193327}
   m_Layer: 0
   m_Name: middle
   m_TagString: Untagged
@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8799265306242523151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.92, y: 3.22, z: 0}
+  m_LocalPosition: {x: -1.9, y: 2.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +319,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.1858444}
+  m_Offset: {x: 0, y: -0.8425405}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -330,7 +330,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 5.4028378}
+  m_Size: {x: 1, y: 3.6176581}
   m_EdgeRadius: 0
 --- !u!114 &8908879103608731408
 MonoBehaviour:
@@ -344,8 +344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34c402e2a625334db7f8e85abb21153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 5221015047648193327}
   logic: {fileID: 0}
---- !u!82 &6367805688657822768
+--- !u!82 &5221015047648193327
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,7 +366,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.1561744
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
